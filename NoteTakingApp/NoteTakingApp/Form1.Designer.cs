@@ -46,14 +46,14 @@
             // 
             // titleBox
             // 
+            titleBox.AccessibleDescription = "";
             titleBox.BackColor = Color.White;
             titleBox.BorderStyle = BorderStyle.FixedSingle;
             titleBox.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             titleBox.Location = new Point(413, 60);
             titleBox.MaxLength = 50;
-            titleBox.Multiline = true;
             titleBox.Name = "titleBox";
-            titleBox.Size = new Size(825, 38);
+            titleBox.Size = new Size(825, 39);
             titleBox.TabIndex = 0;
             // 
             // noteBox
@@ -122,46 +122,67 @@
             // 
             // newNoteButton
             // 
+            newNoteButton.BackColor = Color.White;
+            newNoteButton.Cursor = Cursors.Hand;
+            newNoteButton.FlatAppearance.BorderSize = 0;
+            newNoteButton.FlatAppearance.MouseDownBackColor = Color.Silver;
+            newNoteButton.FlatAppearance.MouseOverBackColor = Color.Silver;
+            newNoteButton.FlatStyle = FlatStyle.Flat;
             newNoteButton.Font = new Font("Please write me a song", 30F, FontStyle.Bold, GraphicsUnit.Point);
             newNoteButton.Location = new Point(12, 605);
             newNoteButton.Name = "newNoteButton";
             newNoteButton.Size = new Size(175, 55);
             newNoteButton.TabIndex = 5;
             newNoteButton.Text = "New Note";
-            newNoteButton.UseVisualStyleBackColor = true;
+            newNoteButton.UseVisualStyleBackColor = false;
             newNoteButton.Click += newNoteButton_Click;
             // 
             // loadButton
             // 
+            loadButton.BackColor = Color.White;
+            loadButton.Cursor = Cursors.Hand;
+            loadButton.FlatAppearance.BorderSize = 0;
+            loadButton.FlatAppearance.MouseOverBackColor = Color.Silver;
+            loadButton.FlatStyle = FlatStyle.Flat;
             loadButton.Font = new Font("Please write me a song", 30F, FontStyle.Bold, GraphicsUnit.Point);
             loadButton.Location = new Point(221, 605);
             loadButton.Name = "loadButton";
             loadButton.Size = new Size(175, 55);
             loadButton.TabIndex = 6;
             loadButton.Text = "Load";
-            loadButton.UseVisualStyleBackColor = true;
+            loadButton.UseVisualStyleBackColor = false;
             loadButton.Click += loadButton_Click;
             // 
             // saveButton
             // 
+            saveButton.BackColor = Color.White;
+            saveButton.Cursor = Cursors.Hand;
+            saveButton.FlatAppearance.BorderSize = 0;
+            saveButton.FlatAppearance.MouseOverBackColor = Color.Silver;
+            saveButton.FlatStyle = FlatStyle.Flat;
             saveButton.Font = new Font("Please write me a song", 30F, FontStyle.Bold, GraphicsUnit.Point);
             saveButton.Location = new Point(12, 682);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(175, 55);
             saveButton.TabIndex = 7;
             saveButton.Text = "Save";
-            saveButton.UseVisualStyleBackColor = true;
+            saveButton.UseVisualStyleBackColor = false;
             saveButton.Click += saveButton_Click;
             // 
             // deleteButton
             // 
+            deleteButton.BackColor = Color.White;
+            deleteButton.Cursor = Cursors.Hand;
+            deleteButton.FlatAppearance.BorderSize = 0;
+            deleteButton.FlatAppearance.MouseOverBackColor = Color.Silver;
+            deleteButton.FlatStyle = FlatStyle.Flat;
             deleteButton.Font = new Font("Please write me a song", 30F, FontStyle.Bold, GraphicsUnit.Point);
             deleteButton.Location = new Point(221, 682);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(175, 55);
             deleteButton.TabIndex = 8;
             deleteButton.Text = "Delete";
-            deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.UseVisualStyleBackColor = false;
             deleteButton.Click += deleteButton_Click;
             // 
             // label1

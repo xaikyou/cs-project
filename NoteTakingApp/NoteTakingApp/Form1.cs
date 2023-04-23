@@ -18,7 +18,7 @@ namespace NoteTakingApp
             notes.Columns.Add("Note", typeof(String));
             previousNotes.DataSource = notes;
             previousNotes.Columns["Note"].Visible = false;
-            previousNotes.Font = new System.Drawing.Font("Please write me a song", 20F, System.Drawing.FontStyle.Bold);
+            previousNotes.Font = new Font("Please write me a song", 20F, System.Drawing.FontStyle.Bold);
         }
 
         private void newNoteButton_Click(object sender, EventArgs e)
@@ -33,9 +33,6 @@ namespace NoteTakingApp
             if (previousNotes.CurrentRow != null)
             {
                 index = previousNotes.CurrentCell.RowIndex;
-            }
-            if (index > -1)
-            {
                 titleBox.Text = notes.Rows[index].ItemArray[0].ToString();
                 noteBox.Text = notes.Rows[index].ItemArray[1].ToString();
             }
@@ -50,8 +47,12 @@ namespace NoteTakingApp
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            int index = previousNotes.CurrentCell.RowIndex;
-            notes.Rows[index].Delete();
+            int index = -1;
+            if (previousNotes.CurrentRow != null)
+            {
+                index = previousNotes.CurrentCell.RowIndex;
+                notes.Rows[index].Delete();
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,9 +70,6 @@ namespace NoteTakingApp
             if (previousNotes.CurrentRow != null)
             {
                 index = previousNotes.CurrentCell.RowIndex;
-            }
-            if (index > -1)
-            {
                 titleBox.Text = notes.Rows[index].ItemArray[0].ToString();
                 noteBox.Text = notes.Rows[index].ItemArray[1].ToString();
             }
@@ -88,6 +86,7 @@ namespace NoteTakingApp
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
+            Cursor.Current = Cursors.SizeAll;
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
     }
